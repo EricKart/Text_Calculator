@@ -44,22 +44,19 @@ export default function App() {
   }
 
   return (
-    <>
-    <Router>
-      <Navbar title="TEXT PLAYER" mode={mode} aboutText="About Us" togglemode={togglemode} modetext={modetext}/>
+<>
+  <Router>
+      <Navbar title="TEXT PLAYER" mode={mode} togglemode={togglemode} modetext={modetext}/>
       <Alert alert={alert}/>
-      <div className="container mb-3">
-        <Routes>
-        <Route exact path="/about" element={<About />} />
+    <div className="container mb-3">
+      <Routes>
+        <Route exact path="/about" element={<About mode={mode}/>} />
         <Route exact path="/" element={<TextForm heading="Enter your text to analyze" mode={mode} showAlert={showAlert}/>}/>
-        
-          {/* <About/> */}
-        
-        </Routes>
-      </div>
-    </Router>
-
-    </>
+        {/* <About/>  */}
+      </Routes> 
+    </div>
+  </Router>
+</>
   
   );
 }
