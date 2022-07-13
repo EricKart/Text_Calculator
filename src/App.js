@@ -51,7 +51,7 @@ export default function App() {
     <div className="container mb-3">
       <Routes>
         <Route exact path="/about" element={<About mode={mode}/>} />
-        <Route exact path="/" element={<TextForm heading="Enter your text to analyze" mode={mode} showAlert={showAlert}/>}/>
+        <Route exact path="/" element={<TextForm heading="Text player -  Word counter, Character counter" mode={mode} showAlert={showAlert}/>}/>
         {/* <About/>  */}
       </Routes> 
     </div>
