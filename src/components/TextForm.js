@@ -51,18 +51,18 @@ const handleClearclick = ()=> {
     <div className='container' style={{color: props.mode==="dark"? "white" : "black"}}>
       <h1 className='mb-2'>{props.heading} </h1>
         <div className="mb-3">
-             <textarea className="form-control" value={text} /*</div>value1={count}</div>*/ style={{background: props.mode==='light'? 'grey': 'white', color: props.mode==="dark"? "black" : "white"}} onChange={handleOnchange} id="MyBox"  rows="8"></textarea>
+             <textarea className="form-control" value={text} /*</div>value1={count}</div>*/ style={{background: props.mode==='light'? '#89e4ba': 'white', color: props.mode==="dark"? "black" : "black"}} onChange={handleOnchange} id="MyBox"  rows="8"></textarea>
         </div>
-        <span><button className='btn btn-primary' onClick={handleUpClick}>Convert to UpperCase</button> &nbsp;&nbsp;&nbsp;
+        <span><button className='btn btn-primary mx-1 my-1' onClick={handleUpClick}>Convert to UpperCase</button> &nbsp;&nbsp;&nbsp;
         {/* <button className='btn btn-primary' onClick={handleUpClick1}>Count Characters</button>
         &nbsp;&nbsp;&nbsp;  */}
-        <button className='btn btn-primary' onClick={handleLoClick}>Convert To lowercase</button> &nbsp;&nbsp;&nbsp;
-        <button className='btn btn-primary' onClick={handleClearclick}>Clear</button> &nbsp;&nbsp;&nbsp;
-        <button className='btn btn-primary' onClick={handleCopyClick}>Copy</button></span>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleLoClick}>Convert To lowercase</button> &nbsp;&nbsp;&nbsp;
+        <button className='btn btn-primary mx-1 my-1' onClick={handleClearclick}>Clear</button> &nbsp;&nbsp;&nbsp;
+        <button className='btn btn-primary mx-1 my-1' onClick={handleCopyClick}>Copy</button></span>
     </div>
-    <div className='container my-2' style={{color: props.mode==="dark"? "white" : "black"}}>
+    <div className='container my-2' style={{color: props.mode==="dark"? 'white': "black"}}>
       <h2>Your text summary</h2>
-      <p>{text.split(" ").length} words, {text.length} characters</p>
+      <p style={{color: props.mode==="dark"? '#00FF33': "#7122FA"}}><strong>{text.split(" ").filter((element)=>{return element.length!==0}).length} words, {text.length} characters</strong></p>
       <p>{0.008 * text.split(" ").length}Minutes read</p>
       <h2>Preview</h2>
       <p>{text}</p>
